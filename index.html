@@ -19,6 +19,45 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div class="js-menu-container">
+      <button class="menu-toggle js-close-menu">
+        <svg width="40" height="40">
+          <use href="./images/icons.svg#icon-close-mobile-menu"></use>
+        </svg>
+      </button>
+
+      <nav class="menu-drawer-navigation">
+        <ul class="mobile-navigation">
+          <li>
+            <a href="index.html" id="current">Studio</a>
+          </li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-contact-info">
+        <a href="mailto:info@devstudio.com"> info@devstudio.com</a>
+        <a href="tel:+12127724150"> +1 212-772-4150</a>
+      </div>
+
+      <div class="social-media-mobile">
+        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+        <svg class="line-icon">
+          <use href="./images/icons.svg#icon-small-dash-social-media"></use>
+        </svg>
+        <a href="https://twitter.com/" target="_blank">Twitter</a>
+        <svg class="line-icon">
+          <use href="./images/icons.svg#icon-small-dash-social-media"></use>
+        </svg>
+        <a href="hhttps://www.facebook.com/" target="_blank">Facebook</a>
+        <svg class="line-icon">
+          <use href="./images/icons.svg#icon-small-dash-social-media"></use>
+        </svg>
+        <a href="hhttps://linkedin.com/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+
     <header class="global-header">
       <div class="container">
         <div class="logo logo-header">
@@ -26,6 +65,11 @@
             ><span class="blue-text">Web</span
             ><span class="black-text">Studio</span></a
           >
+        </div>
+        <div class="menu-button js-open-menu">
+          <svg>
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
         </div>
         <nav class="main-navigation">
           <ul>
@@ -66,7 +110,7 @@
       </div>
       <div class="container">
         <!--Details about our services-->
-        <section class="services section">
+        <section class="services">
           <ul class="services-list">
             <li class="services-card">
               <div class="container-svg">
@@ -125,30 +169,58 @@
           <ul>
             <li>
               <h3 class="heading-services-light">DESKTOP APPS</h3>
-              <img
-                src="images/image-1-working-space.jpg"
-                alt="A person working and typing on a tablet device"
-                width="370"
-                height="294"
-              />
+
+              <picture>
+                <source
+                  srcset="
+                    ./images/image-1-working-space-d.jpg    1x,
+                    ./images/image-1-working-space-d-2x.jpg 2x
+                  "
+                />
+
+                <img
+                  src="images/image-1-working-space-d.jpg"
+                  alt="A person working and typing on a tablet device"
+                  width="370"
+                  height="294"
+                />
+              </picture>
             </li>
             <li>
               <h3 class="heading-services-light">Mobile APPS</h3>
-              <img
-                src="images/image-2-phone-laptop.jpg"
-                alt="A person working, checking something on both a phone and a laptop"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/image-2-phone-laptop-d.jpg    1x,
+                    ./images/image-2-phone-laptop-d-2x.jpg 2x
+                  "
+                />
+
+                <img
+                  src="images/image-2-phone-laptop-d.jpg"
+                  alt="A person working, checking something on both a phone and a laptop"
+                  width="370"
+                  height="294"
+                />
+              </picture>
             </li>
             <li>
               <h3 class="heading-services-light">DESIGN SOLUTIONS</h3>
-              <img
-                src="images/image-3-tablet.jpg"
-                alt="A person holding a tablet in his hand"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/image-3-tablet-d.jpg    1x,
+                    ./images/image-3-tablet-d-2x.jpg 2x
+                  "
+                />
+
+                <img
+                  src="images/image-3-tablet-d.jpg"
+                  alt="A person holding a tablet in his hand"
+                  width="370"
+                  height="294"
+                />
+              </picture>
             </li>
           </ul>
         </section>
@@ -156,14 +228,40 @@
         <!-- About our team -->
         <section class="our-team section">
           <h2 class="second-title">Our Team</h2>
-          <ul>
+          <ul class="our-team-list">
             <li class="team-members">
-              <img
-                src="images/image-4-christopher.jpg"
-                alt="Christopher-Product Designer"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/image-4-christopher-d.jpg    1x,
+                    ./images/image-4-christopher-d@2x.jpg 2x
+                  "
+                />
+
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/image-4-christopher-t.jpg    1x,
+                    ./images/image-4-christopher-t-2x.jpg 2x
+                  "
+                />
+
+                <!-- Mobile -->
+                <source
+                  srcset="
+                    ./images/image-4-christopher-m.jpg    1x,
+                    ./images/image-4-christopher-m-2x.jpg 2x
+                  "
+                />
+
+                <img
+                  src="./images/image-4-christopher-d.jpg"
+                  alt="Christopher-Product Designer"
+                />
+              </picture>
               <div class="card-container">
                 <h3 class="second-title-team">Christopher Walker</h3>
                 <span class="profession">Product Designer</span>
@@ -200,12 +298,38 @@
               </ul>
             </li>
             <li class="team-members">
-              <img
-                src="images/image-5-kylie.jpg"
-                alt="Kylie-Front Developer"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/image-5-kylie-d.jpg    1x,
+                    ./images/image-5-kylie-d-2x.jpg 2x
+                  "
+                />
+
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/image-5-kylie-t.png    1x,
+                    ./images/image-5-kylie-t-2x.jpg 2x
+                  "
+                />
+
+                <!-- Mobile -->
+                <source
+                  srcset="
+                    ./images/image-5-kylie-m.jpg    1x,
+                    ./images/image-5-kylie-m-2x.jpg 2x
+                  "
+                />
+
+                <img
+                  src="images/image-5-kylie-d.jpg"
+                  alt="Kylie-Front Developer"
+                />
+              </picture>
               <div class="card-container">
                 <h3 class="second-title-team">Kylie Evans</h3>
                 <span class="profession">Frontend Developer</span>
@@ -242,13 +366,35 @@
               </ul>
             </li>
             <li class="team-members">
-              <img
-                src="images/image-6-ryan.jpg"
-                alt="Ryan-Marketing"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/image-6-ryan-d.jpg    1x,
+                    ./images/image-6-ryan-d-2x.jpg 2x
+                  "
+                />
 
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/image-6-ryan-t.jpg    1x,
+                    ./images/image-6-ryan-t-2x.jpg 2x
+                  "
+                />
+
+                <!-- Mobile -->
+                <source
+                  srcset="
+                    ./images/image-6-ryan-m.jpg    1x,
+                    ./images/image-6-ryan-m-2x.jpg 2x
+                  "
+                />
+
+                <img src="images/image-6-ryan-d.jpg" alt="Ryan-Marketing" />
+              </picture>
               <div class="card-container">
                 <h3 class="second-title-team">Ryan Harris</h3>
                 <span class="profession">Marketing</span>
@@ -285,12 +431,35 @@
               </ul>
             </li>
             <li class="team-members">
-              <img
-                src="images/image-7-tyler.jpg"
-                alt="Tyler-UI Designer"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/image-7-tyler-d.jpg    1x,
+                    ./images/image-7-tyler-d-2x.jpg 2x
+                  "
+                />
+
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/image-7-tyler-t.jpg    1x,
+                    ./images/image-7-tyler-t-2x.jpg 2x
+                  "
+                />
+
+                <!-- Mobile -->
+                <source
+                  srcset="
+                    ./images/image-7-tyler-m.jpg    1x,
+                    ./images/image-7-tyler-m-2x.jpg 2x
+                  "
+                />
+
+                <img src="images/image-7-tyler-d.jpg" alt="Tyler-UI Designer" />
+              </picture>
               <div class="card-container">
                 <h3 class="second-title-team">Tyler Moore</h3>
                 <span class="profession">UI Designer</span>
@@ -384,87 +553,94 @@
     </main>
 
     <footer class="global-footer">
-      <div class="container footer-container">
-        <div class="logo footer-logo">
-          <a href="index.html"
-            ><span class="blue-text">Web</span
-            ><span class="white-text">Studio</span></a
-          >
-        </div>
-        <!-- Contact infrormation about WebStudio-->
+      <div class="address-and-social-media">
+        <div class="container footer-container">
+          <div class="logo footer-logo">
+            <a href="index.html"
+              ><span class="blue-text">Web</span
+              ><span class="white-text">Studio</span></a
+            >
+          </div>
+          <!-- Contact infrormation about WebStudio-->
 
-        <address class="footer-address contact-footer">
-          695 Park Ave, NY 10065, USA
-          <a href="mailto:info@devstudio.com" class="contact-footer"
-            >info@devstudio.com</a
+          <address class="footer-address contact-footer">
+            695 Park Ave, NY 10065, USA
+            <a href="mailto:info@devstudio.com" class="contact-footer"
+              >info@devstudio.com</a
+            >
+            <a href="tel:+12127724150" class="contact-footer"
+              >+1 212-772-4150</a
+            >
+          </address>
+        </div>
+        <!--Social Media-->
+        <div class="footer-child-container">
+          <h4 class="find-us-footer">Find us on</h4>
+          <ul class="social-media-svgs">
+            <li class="social-media-item">
+              <a href="https://www.instagram.com/" class="svg-link-dark">
+                <svg class="instagram-footer">
+                  <use href="./images/icons.svg#icon-instagram-footer"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media-item">
+              <a href="https://twitter.com" class="svg-link-dark">
+                <svg class="twitter-footer">
+                  <use href="./images/icons.svg#icon-twitter-footer"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media-item">
+              <a href="https://www.facebook.com/" class="svg-link-dark">
+                <svg class="facebook-footer">
+                  <use href="./images/icons.svg#icon-facebook-footer"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media-item">
+              <a href="https://gb.linkedin.com/" class="svg-link-dark">
+                <svg class="linkedin-footer">
+                  <use href="./images/icons.svg#icon-linkedin-footer"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="newsletter-form-container">
+        <form class="newsletter-form">
+          <div
+            class="newsletter-title"
+            role="group"
+            aria-labelledby="email-contact-head"
           >
-          <a href="tel:+12127724150" class="contact-footer">+1 212-772-4150</a>
-        </address>
-      </div>
-      <!--Social Media-->
-      <div class="footer-child-container">
-        <h4 class="find-us-footer">Find us on</h4>
-        <ul class="social-media-svgs">
-          <li class="social-media-item">
-            <a href="https://www.instagram.com/" class="svg-link-dark">
-              <svg class="instagram-footer">
-                <use href="./images/icons.svg#icon-instagram-footer"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-media-item">
-            <a href="https://twitter.com" class="svg-link-dark">
-              <svg class="twitter-footer">
-                <use href="./images/icons.svg#icon-twitter-footer"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-media-item">
-            <a href="https://www.facebook.com/" class="svg-link-dark">
-              <svg class="facebook-footer">
-                <use href="./images/icons.svg#icon-facebook-footer"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-media-item">
-            <a href="https://gb.linkedin.com/" class="svg-link-dark">
-              <svg class="linkedin-footer">
-                <use href="./images/icons.svg#icon-linkedin-footer"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <form class="newsletter-form">
-        <div
-          class="newsletter-title"
-          role="group"
-          aria-labelledby="email-contact-head"
-        >
-          <p id="email-contact-head">Subscribe to the newsletter</p>
-        </div>
-        <div class="email-and-button-container">
-          <div class="email-container-footer-">
-            <label for="email">
-              <input
-                class="email-field"
-                type="email"
-                name="email"
-                id="email"
-                required
-                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-                placeholder="E-mail"
-              />
-            </label>
+            <p id="email-contact-head">Subscribe to the newsletter</p>
           </div>
-          <div class="button-container-footer">
-            <button type="submit" class="button-footer">
-              Subscribe
-              <svg><use href="./images/icons.svg#icon-send"></use></svg>
-            </button>
+          <div class="email-and-button-container">
+            <div class="email-container-footer-">
+              <label for="email">
+                <input
+                  class="email-field"
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                  placeholder="E-mail"
+                />
+              </label>
+            </div>
+            <div class="button-container-footer">
+              <button type="submit" class="button-footer">
+                Subscribe
+                <svg><use href="./images/icons.svg#icon-send"></use></svg>
+              </button>
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </footer>
 
     <!-- MODAL -->
@@ -564,6 +740,13 @@
       </div>
     </div>
 
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

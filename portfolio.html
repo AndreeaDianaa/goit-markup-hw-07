@@ -20,6 +20,45 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div class="js-menu-container">
+      <button class="menu-toggle js-close-menu">
+        <svg width="40" height="40">
+          <use href="./images/icons.svg#icon-close-mobile-menu"></use>
+        </svg>
+      </button>
+
+      <nav class="menu-drawer-navigation">
+        <ul class="mobile-navigation">
+          <li>
+            <a href="index.html" id="current">Studio</a>
+          </li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-contact-info">
+        <a href="mailto:info@devstudio.com"> info@devstudio.com</a>
+        <a href="tel:+12127724150"> +1 212-772-4150</a>
+      </div>
+
+      <div class="social-media-mobile">
+        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+        <svg class="line-icon">
+          <use href="./images/icons.svg#icon-small-dash-social-media"></use>
+        </svg>
+        <a href="https://twitter.com/" target="_blank">Twitter</a>
+        <svg class="line-icon">
+          <use href="./images/icons.svg#icon-small-dash-social-media"></use>
+        </svg>
+        <a href="hhttps://www.facebook.com/" target="_blank">Facebook</a>
+        <svg class="line-icon">
+          <use href="./images/icons.svg#icon-small-dash-social-media"></use>
+        </svg>
+        <a href="hhttps://linkedin.com/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+
     <header class="global-header">
       <div class="container">
         <div class="logo logo-header">
@@ -28,6 +67,12 @@
             ><span class="black-text">Studio</span></a
           >
         </div>
+        <div class="menu-button js-open-menu">
+          <svg>
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </div>
+
         <nav class="main-navigation">
           <ul>
             <li>
@@ -83,12 +128,36 @@
                   </p>
                 </div>
               </div>
-              <img
-                src="images/technoduck.jpg"
-                alt="technoduck web-site"
-                width="370"
-                height="294"
-              />
+
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/technoduck-d.jpg    1x,
+                    ./images/technoduck-d-2x.jpg 2x
+                  "
+                />
+
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/technoduck-t.jpg    1x,
+                    ./images/technoduck-t-2x.jpg 2x
+                  "
+                />
+
+                <!-- Mobile -->
+                <source
+                  srcset="
+                    ./images/technoduck-m.jpg    1x,
+                    ./images/technoduck-m-2x.jpg 2x
+                  "
+                />
+
+                <img src="images/technoduck-d.jpg" alt="technoduck web-site" />
+              </picture>
               <div class="card-portfolio">
                 <h3 class="second-title-products-services">Technoduck</h3>
                 <span class="type">Web-site</span>
@@ -104,12 +173,39 @@
                   </p>
                 </div>
               </div>
-              <img
-                src="images/poster-new.jpg"
-                alt="Poster New Orlean vs Golden Star"
-                width="370"
-                height="294"
-              />
+
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/poster-new-d.jpg    1x,
+                    ./images/poster-new-d-2x.jpg 2x
+                  "
+                />
+
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/poster-new-t.jpg    1x,
+                    ./images/poster-new-t-2x.jpg 2x
+                  "
+                />
+
+                <!-- Mobile -->
+                <source
+                  srcset="
+                    ./images/poster-new-m.jpg    1x,
+                    ./images/poster-new-m-2x.jpg 2x
+                  "
+                />
+
+                <img
+                  src="images/poster-new-d.jpg"
+                  alt="Poster New Orlean vs Golden Star"
+                />
+              </picture>
               <div class="card-portfolio">
                 <h3 class="second-title-products-services">
                   Poster New Orlean vs Golden Star
@@ -127,12 +223,40 @@
                   </p>
                 </div>
               </div>
-              <img
-                src="images/sea-food.jpg"
-                alt="Seafood Restaurant logo "
-                width="370"
-                height="294"
-              />
+
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/sea-food-d.jpg    1x,
+                    ./images/sea-food-d-2x.jpg 2x
+                  "
+                />
+
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/sea-food-t.jpg    1x,
+                    ./images/sea-food-t-2x.jpg 2x
+                  "
+                />
+
+                <!-- Mobile -->
+                <source
+                  srcset="
+                    ./images/sea-food-m.jpg    1x,
+                    ./images/sea-food-m-2x.jpg 2x
+                  "
+                />
+
+                <img
+                  src="images/sea-food-d.jpg"
+                  alt="Seafood Restaurant logo "
+                />
+              </picture>
+
               <div class="card-portfolio">
                 <h3 class="second-title-products-services">
                   Seafood Restaurant
@@ -150,12 +274,40 @@
                   </p>
                 </div>
               </div>
-              <img
-                src="images/project-prime.jpg"
-                alt="Project Prime-headphones"
-                width="370"
-                height="294"
-              />
+
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/project-prime-d.jpg    1x,
+                    ./images/project-prime-d-2x.jpg 2x
+                  "
+                />
+
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/project-prime-t.jpg    1x,
+                    ./images/project-prime-t-2x.jpg 2x
+                  "
+                />
+
+                <!-- Mobile -->
+                <source
+                  srcset="
+                    ./images/project-prime-m.jpg    1x,
+                    ./images/project-prime-m-2x.jpg 2x
+                  "
+                />
+
+                <img
+                  src="images/project-prime-d.jpg"
+                  alt="Project Prime-headphones"
+                />
+              </picture>
+
               <div class="card-portfolio">
                 <h3 class="second-title-products-services">Project Prime</h3>
                 <span class="type">Marketing</span>
@@ -171,12 +323,36 @@
                   </p>
                 </div>
               </div>
-              <img
-                src="images/project-boxes.jpg"
-                alt="Project boxes"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/project-boxes-d.jpg    1x,
+                    ./images/project-boxes-d-2x.jpg 2x
+                  "
+                />
+
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/project-boxes-t.jpg    1x,
+                    ./images/project-boxes-t-2x.jpg 2x
+                  "
+                />
+
+                <!-- Mobile -->
+                <source
+                  srcset="
+                    ./images/project-boxes-m.jpg   1x,
+                    /images/project-boxes-m-2x.jpg 2x
+                  "
+                />
+
+                <img src="images/project-boxes-d.jpg" alt="Project boxes" />
+              </picture>
+
               <div class="card-portfolio">
                 <h3 class="second-title-products-services">Project Boxes</h3>
                 <span class="type">Apps</span>
@@ -192,12 +368,40 @@
                   </p>
                 </div>
               </div>
-              <img
-                src="images/inspiration.jpg"
-                alt="Inspiration has no Borders web-site"
-                width="370"
-                height="294"
-              />
+
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/inspiration-d.jpg    1x,
+                    ./images/inspiration-d-2x.jpg 2x
+                  "
+                />
+
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/inspiration-t.jpg    1x,
+                    ./images/inspiration-t-2x.jpg 2x
+                  "
+                />
+
+                <!-- Mobile -->
+                <source
+                  srcset="
+                    ./images/inspiration-m.jpg    1x,
+                    ./images/inspiration-m-2x.jpg 2x
+                  "
+                />
+
+                <img
+                  src="images/inspiration-d.jpg"
+                  alt="Inspiration has no Borders web-site"
+                />
+              </picture>
+
               <div class="card-portfolio">
                 <h3 class="second-title-products-services">
                   Inspiration has no Borders
@@ -215,12 +419,40 @@
                   </p>
                 </div>
               </div>
-              <img
-                src="images/limited-edition.jpg"
-                alt="Limited edition design"
-                width="370"
-                height="294"
-              />
+
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/limited-edition-d.jpg    1x,
+                    ./images/limited-edition-d-2x.jpg 2x
+                  "
+                />
+
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/limited-edition-t.jpg    1x,
+                    ./images/limited-edition-t-2x.jpg 2x
+                  "
+                />
+
+                <!-- Mobile -->
+                <source
+                  srcset="
+                    ./images/limited-edition-m.jpg    1x,
+                    ./images/limited-edition-m-2x.jpg 2x
+                  "
+                />
+
+                <img
+                  src="images/limited-edition-d.jpg"
+                  alt="Limited edition design"
+                />
+              </picture>
+
               <div class="card-portfolio">
                 <h3 class="second-title-products-services">Limited Edition</h3>
                 <span class="type">Design</span>
@@ -236,12 +468,37 @@
                   </p>
                 </div>
               </div>
-              <img
-                src="images/project-lab.jpg"
-                alt="Project LAB label"
-                width="370"
-                height="294"
-              />
+
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/project-lab-d.jpg    1x,
+                    ./images/project-lab-d-2x.jpg 2x
+                  "
+                />
+
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/project-lab-t.jpg    1x,
+                    ./images/project-lab-t-2x.jpg 2x
+                  "
+                />
+
+                <!-- Mobile -->
+                <source
+                  srcset="
+                    ./images/project-lab-m.jpg    1x,
+                    ./images/project-lab-m-2x.jpg 2x
+                  "
+                />
+
+                <img src="images/project-lab-d.jpg" alt="Project LAB label" />
+              </picture>
+
               <div class="card-portfolio">
                 <h3 class="second-title-products-services">Project LAB</h3>
                 <span class="type">Marketing</span>
@@ -257,12 +514,40 @@
                   </p>
                 </div>
               </div>
-              <img
-                src="images/growing-business.jpg"
-                alt="Growing business app"
-                width="370"
-                height="294"
-              />
+
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/growing-business-d.jpg    1x,
+                    ./images/growing-business-d-2x.jpg 2x
+                  "
+                />
+
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/growing-business-t.jpg    1x,
+                    ./images/growing-business-t-2x.jpg 2x
+                  "
+                />
+
+                <!-- Mobile -->
+                <source
+                  srcset="
+                    ./images/growing-business-m.jpg    1x,
+                    ./images/growing-business-m-2x.jpg 2x
+                  "
+                />
+
+                <img
+                  src="images/growing-business-d.jpg"
+                  alt="Growing business app"
+                />
+              </picture>
+
               <div class="card-portfolio">
                 <h3 class="second-title-products-services">Growing Business</h3>
                 <span class="type">Apps</span>
@@ -274,88 +559,103 @@
     </main>
 
     <footer class="global-footer">
-      <div class="container footer-container">
-        <div class="logo footer-logo">
-          <a href="index.html"
-            ><span class="blue-text">Web</span
-            ><span class="white-text">Studio</span></a
-          >
-        </div>
-        <!-- Contact infrormation about WebStudio-->
-
-        <address class="footer-address contact-footer">
-          695 Park Ave, NY 10065, USA
-          <a href="mailto:info@devstudio.com" class="contact-footer"
-            >info@devstudio.com</a
-          >
-          <a href="tel:+12127724150" class="contact-footer">+1 212-772-4150</a>
-        </address>
-      </div>
-      <!--Social Media-->
-      <div class="footer-child-container">
-        <h4 class="find-us-footer">Find us on</h4>
-        <ul class="social-media-svgs">
-          <li class="social-media-item">
-            <a href="https://www.instagram.com/" class="svg-link-dark">
-              <svg class="instagram-footer">
-                <use href="./images/icons.svg#icon-instagram-footer"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-media-item">
-            <a href="https://twitter.com" class="svg-link-dark">
-              <svg class="twitter-footer">
-                <use href="./images/icons.svg#icon-twitter-footer"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-media-item">
-            <a href="https://www.facebook.com/" class="svg-link-dark">
-              <svg class="facebook-footer">
-                <use href="./images/icons.svg#icon-facebook-footer"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-media-item">
-            <a href="https://gb.linkedin.com/" class="svg-link-dark">
-              <svg class="linkedin-footer">
-                <use href="./images/icons.svg#icon-linkedin-footer"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <form class="newsletter-form">
-        <div
-          class="newsletter-title"
-          role="group"
-          aria-labelledby="email-contact-head"
-        >
-          <p id="email-contact-head">Subscribe to the newsletter</p>
-        </div>
-        <div class="email-and-button-container">
-          <div class="email-container-footer-">
-            <label for="email">
-              <input
-                class="email-field"
-                type="email"
-                name="email"
-                id="email"
-                required
-                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-                placeholder="E-mail"
-              />
-            </label>
+      <div class="address-and-social-media">
+        <div class="container footer-container">
+          <div class="logo footer-logo">
+            <a href="index.html"
+              ><span class="blue-text">Web</span
+              ><span class="white-text">Studio</span></a
+            >
           </div>
-          <div class="button-container-footer">
-            <button type="submit" class="button-footer">
-              Subscribe
-              <svg><use href="./images/icons.svg#icon-send"></use></svg>
-            </button>
-          </div>
+          <!-- Contact infrormation about WebStudio-->
+
+          <address class="footer-address contact-footer">
+            695 Park Ave, NY 10065, USA
+            <a href="mailto:info@devstudio.com" class="contact-footer"
+              >info@devstudio.com</a
+            >
+            <a href="tel:+12127724150" class="contact-footer"
+              >+1 212-772-4150</a
+            >
+          </address>
         </div>
-      </form>
+        <!--Social Media-->
+        <div class="footer-child-container">
+          <h4 class="find-us-footer">Find us on</h4>
+          <ul class="social-media-svgs">
+            <li class="social-media-item">
+              <a href="https://www.instagram.com/" class="svg-link-dark">
+                <svg class="instagram-footer">
+                  <use href="./images/icons.svg#icon-instagram-footer"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media-item">
+              <a href="https://twitter.com" class="svg-link-dark">
+                <svg class="twitter-footer">
+                  <use href="./images/icons.svg#icon-twitter-footer"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media-item">
+              <a href="https://www.facebook.com/" class="svg-link-dark">
+                <svg class="facebook-footer">
+                  <use href="./images/icons.svg#icon-facebook-footer"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media-item">
+              <a href="https://gb.linkedin.com/" class="svg-link-dark">
+                <svg class="linkedin-footer">
+                  <use href="./images/icons.svg#icon-linkedin-footer"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="newsletter-form-container">
+        <form class="newsletter-form">
+          <div
+            class="newsletter-title"
+            role="group"
+            aria-labelledby="email-contact-head"
+          >
+            <p id="email-contact-head">Subscribe to the newsletter</p>
+          </div>
+          <div class="email-and-button-container">
+            <div class="email-container-footer-">
+              <label for="email">
+                <input
+                  class="email-field"
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                  placeholder="E-mail"
+                />
+              </label>
+            </div>
+            <div class="button-container-footer">
+              <button type="submit" class="button-footer">
+                Subscribe
+                <svg><use href="./images/icons.svg#icon-send"></use></svg>
+              </button>
+
+              <script
+                defer
+                src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+                integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+                crossorigin="anonymous"
+              ></script>
+
+              <script src="./js/mobile-menu.js"></script>
+            </div>
+          </div>
+        </form>
+      </div>
     </footer>
   </body>
 </html>
